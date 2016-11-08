@@ -1,0 +1,38 @@
+//Load Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:500,700');
+
+//Font Names
+$headingFont: 'Roboto Mono', monospace;;
+$paragraphFont: 'Open Sans', sans-serif;
+$sourceFont: 'Source Sans Pro', sans-serif;
+
+$headingFont-color: #101010;
+$paragraphFont-color: #272727;
+
+//media querie variables http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/#overboard
+$smallBP: 24em;
+$smallBP2: 29.75em;
+$smallBP3: 39.8em;
+$mediumBP: 46.8em;
+$mediumBP2: 48em;
+$largeBP: 50em;
+$largeBP2: 54.5em;
+$xlargeBP: 60em;
+$xlargeBP2: 67em;
+
+
+//project colors
+$primary-color: #247AFB;
+$secondary-color: #FFFFFF;
+$tertiary-color: #EA5B2E;
+$quaternary-color: #B61B2B;
+
+
+//padding/margins vars
+$basespace: .5em;
+$basespaceInterval: 4;
+
+
+//grid
+$columns: 12;
