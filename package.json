@@ -1,0 +1,30 @@
+{
+  "name": "edgarpino.com",
+  "version": "1.0.0",
+  "description": "Personal website. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "edgar",
+    "pino",
+    "website",
+    "portfolio"
+  ],
+  "author": "Edgar Pino <me@edgarpino.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "html-webpack-plugin": "^2.24.1",
+    "node-sass": "^3.11.2",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
