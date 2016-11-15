@@ -1,0 +1,38 @@
+
+.section--main {
+
+  @extend .padding-all-1x;
+  flex: 1 100%;
+
+  header {
+
+    border-bottom: solid lightslategray 1px;
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+
+    > *:not(:last-child) {
+      padding-bottom: .25em;
+    }
+
+  }
+
+  section {
+
+    p {
+      margin-bottom: 1.5em;
+    }
+
+  }
+
+
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+  /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars
+   */
+  .section--main { flex: 2.5 0px; }
+
+
+}

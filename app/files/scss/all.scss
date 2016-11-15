@@ -4,5 +4,14 @@
 @import 'parts/misc';
 @import "parts/colors";
 
-@import "parts/header";
+@import "parts/aside";
 @import "parts/main";
+@import "parts/nav";
+
+.content--wrapper {
+
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+
+}

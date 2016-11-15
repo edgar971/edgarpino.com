@@ -1,5 +1,7 @@
 import React from 'react'
-import Header from './parts/Header'
+import Aside from './parts/Aside'
+import Main from './parts/Main'
+import Nav from './parts/Nav'
 
 
 
@@ -12,8 +14,10 @@ class MainApp extends React.Component {
 
     render() {
         return(
-            <main className="full-height">
-                <Header/>
+            <main className="content--wrapper full-height ">
+                <Aside/>
+                <Main />
+                <Nav />
             </main>
         );
 

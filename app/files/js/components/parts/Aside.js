@@ -4,9 +4,9 @@ class Header extends React.Component {
 
     render() {
         return(
-            <header className="header--main">
+            <aside className="aside--main">
                 <h1>&lt;Hello World/&gt;</h1>
-            </header>
+            </aside>
         )
     }
 
