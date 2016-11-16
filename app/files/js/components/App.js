@@ -2,8 +2,7 @@ import React from 'react'
 import Aside from './parts/Aside'
 import Main from './parts/Main'
 import Nav from './parts/Nav'
-
-
+import HeadStreak from './parts/HeadStreak'
 
 class MainApp extends React.Component {
 
@@ -15,6 +14,7 @@ class MainApp extends React.Component {
     render() {
         return(
             <main className="content--wrapper full-height ">
+                <HeadStreak/>
                 <Aside/>
                 <Main />
                 <Nav />

@@ -4,7 +4,8 @@
   "description": "Personal website. ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.config.prod.js",
+    "dev"  : "webpack-dev-server --config webpack.config.dev.js"
   },
   "keywords": [
     "edgar",
@@ -12,6 +13,7 @@
     "website",
     "portfolio"
   ],
+
   "author": "Edgar Pino <me@edgarpino.com>",
   "license": "ISC",
   "devDependencies": {

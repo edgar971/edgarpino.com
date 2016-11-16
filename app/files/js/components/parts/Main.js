@@ -8,6 +8,7 @@ class Main extends React.Component {
 
                 <article>
                     <header>
+
                         <h2> Lorem ipsum dolor sit amet, qui prima ipsum salutandi no</h2>
                         <p>Edgar Pino</p>
                     </header>

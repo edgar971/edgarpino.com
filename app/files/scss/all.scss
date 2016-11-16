@@ -2,8 +2,9 @@
 @import "parts/config";
 @import "parts/type";
 @import 'parts/misc';
-@import "parts/colors";
+@import "parts/base/colors";
 
+@import "parts/components/HeadStreak";
 @import "parts/aside";
 @import "parts/main";
 @import "parts/nav";
