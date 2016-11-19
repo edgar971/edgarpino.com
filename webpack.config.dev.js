@@ -12,7 +12,7 @@ module.exports = {
     entry: [
         'webpack-dev-server/client?http://localhost:8080',
         'webpack/hot/dev-server',
-        path.resolve('app/files/js/main.js')
+        path.resolve('app/files/js/App.js')
     ],
 
     output: {

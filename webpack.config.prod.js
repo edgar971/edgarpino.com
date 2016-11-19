@@ -9,7 +9,7 @@ var path = require('path'),
 module.exports = {
 
     entry: [
-        path.resolve('app/files/js/main.js')
+        path.resolve('app/files/js/App.js')
     ],
 
     output: {

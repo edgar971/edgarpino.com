@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
-    "dev"  : "webpack-dev-server --config webpack.config.dev.js"
+    "dev": "webpack-dev-server --config webpack.config.dev.js"
   },
   "keywords": [
     "edgar",
@@ -13,7 +13,6 @@
     "website",
     "portfolio"
   ],
-
   "author": "Edgar Pino <me@edgarpino.com>",
   "license": "ISC",
   "devDependencies": {
@@ -32,6 +31,7 @@
   },
   "dependencies": {
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-tap-event-plugin": "^1.0.0"
   }
 }
