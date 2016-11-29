@@ -1,5 +1,9 @@
+@import "parts/config";
+@import "parts/base/colors";
 @import 'parts/reset';
-
+@import "parts/components/HeadStreak";
+@import "parts/main";
+@import "parts/misc";
 
 .content--wrapper {
 

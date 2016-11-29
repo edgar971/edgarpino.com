@@ -1,16 +1,18 @@
-.header--light-streaks {
-  flex:100%;
-  height: 5px;
-  background: $silver;
+.main--header {
 
-  ul, li {
-    display: block;
-    height: 100%;
-    overflow: hidden;
-  }
 
-  li {
-    width: 25%;
-    float: left;
+
+}
+
+.header--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vw;
+  background-color: #78909C;
+  color: $white;
+  .header--title {
+    font-size: 3vmax;
+    font-family: $headingFont;
   }
 }
