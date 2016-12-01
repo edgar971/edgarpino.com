@@ -1,0 +1,135 @@
+//Styles for font and site wide text
+//better font size http://typecast.com/blog/a-more-modern-scale-for-web-typography
+
+body {
+  font-family: $paragraphFont;
+  font-size: $global-font-size;
+  font-weight: 400;
+  // Make everything look a little nicer in webkit
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+p {
+  color: $quaternary-color-slate;
+  line-height: 1.5em;
+
+}
+
+strong {
+  font-weight: bold;
+
+}
+em, i {
+  font-style: italic;
+}
+small {
+  font-weight: 300;
+  &.light {
+    font-size: .9em;
+  }
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: $headingFont;
+  font-weight: bolder;
+}
+h1 {
+  font-size: 3em;
+  line-height: 1.05em;
+}
+h1.heading-emphasize {
+  font-weight: normal;
+  font-size: 2.4em;
+  text-transform: uppercase;
+}
+
+@media #{$mq-mediumBP} {
+  h1.heading-emphasize { font-size: 1.8em; }
+}
+
+h2 {
+  font-size: 2.25em;
+  line-height: 1.25em;
+}
+h3 {
+  font-size: 1.75em;
+  line-height: 1.25em;
+}
+h4 {
+  font-size: 1.125em;
+  line-height: 1.22222222em;
+}
+
+blockquote {
+  font-size: 1.5em;
+  line-height: 1.45833333em;
+
+}
+pre, code,kbd,samp {
+  font-family: $sourceFont;
+}
+
+.font-white {
+  color: $white;
+}
+
+.font-left {
+  text-align: left;
+}
+.font-right {
+  text-align: right;
+}
+.font-center {
+  text-align: center;
+}
+
+.font-uppercase {
+  text-transform: uppercase;
+}
+.font-shadow-light {
+  text-shadow: 0px 0px 3px black;
+}
+
+@media all and (max-width: $largeBP) {
+  body {
+    line-height: 1.25em;
+
+  }
+
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.125em;
+  }
+  h2 {
+    font-size: 2em;
+
+  }
+  h3 {
+    font-size: 1.5em;
+
+  }
+  blockquote {
+    font-size: 1.25em;
+    line-height: 1.25em;
+  }
+}
+//medium
+@media all and (max-width: $mediumBP) {
+
+  h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+  }
+  h2 {
+    font-size: 1.625em;
+    line-height: 1.15384615em;
+  }
+  h3 {
+    font-size: 1.375em;
+    line-height: 1.13636364em;
+  }
+  h4 {
+    line-height: 1.11111111em;
+  }
+}

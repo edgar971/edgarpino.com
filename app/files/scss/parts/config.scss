@@ -8,27 +8,58 @@ $paragraphFont: 'Merriweather', serif;
 
 $sourceFont: 'Source Sans Pro', sans-serif;
 
+// Typesetting variables.
+$baseLineHeight: 1.5;
+$scale: 1.414;
+$global-font-size: 1em;
+
 $headingFont-color: #101010;
 $paragraphFont-color: #272727;
 
 //media querie variables http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/#overboard
-$smallBP: 24em;
-$smallBP2: 29.75em;
-$smallBP3: 39.8em;
-$mediumBP: 46.8em;
-$mediumBP2: 48em;
-$largeBP: 50em;
-$largeBP2: 54.5em;
-$xlargeBP: 60em;
-$xlargeBP2: 67em;
+//media querie variables http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/#overboard
+$smallBP: 24em; /* 384 */
+$smallBP2: 29.75em; /* 476 */
+$smallBP3: 39.8em; /* 638.8 */
+$mediumBP: 46.8em; /* 748.8 */
+$mediumBP2: 48em; /* 768 */
+$largeBP: 50em; /* 800 */
+$largeBP2: 54.5em; /* 872 */
+$xlargeBP: 60em; /* 960 */
+$xlargeBP2: 67em; /* 1072 */
 
+$mq-smallBP:  "all and (max-width: #{$smallBP)})";
+$mq-smallBP2:  "all and (max-width: #{$smallBP2)})";
+$mq-smallBP3:  "all and (max-width: #{$smallBP3)})";
+$mq-mediumBP:  "all and (max-width: #{$mediumBP)})";
+$mq-mediumBP2:  "all and (max-width: #{$mediumBP2)})";
+$mq-largeBP:  "all and (max-width: #{$largeBP)})";
+$mq-largeBP2:  "all and (max-width: #{$largeBP2)})";
+$mq-xlargeBP:  "all and (max-width: #{$xlargeBP)})";
+$mq-xlargeBP2:  "all and (max-width: #{$xlargeBP2)})";
+
+
+$mq-smallBP-min:  "all and (min-width: #{$smallBP)})";
+$mq-smallBP2-min:  "all and (min-width: #{$smallBP2)})";
+$mq-smallBP3-min:  "all and (min-width: #{$smallBP3)})";
+$mq-mediumBP-min:  "all and (min-width: #{$mediumBP)})";
+$mq-mediumBP2-min:  "all and (min-width: #{$mediumBP2)})";
+$mq-largeBP-min:  "all and (min-width: #{$largeBP)})";
+$mq-largeBP2-min:  "all and (min-width: #{$largeBP2)})";
+$mq-xlargeBP-min:  "all and (min-width: #{$xlargeBP)})";
+$mq-xlargeBP2-min:  "all and (min-width: #{$xlargeBP2)})";
 
 //project colors
 $primary-color: #008AC9;
 $secondary-color: #2B115A;
 $tertiary-color: #F11A22;
 $quaternary-color: #B61B2B;
-
+$primary-color-purple: #452d64;
+$primary-color-lighe-purple: #e3dbec;
+$secondary-color-green: #8aad38;
+$tertiary-color-gray: #dbdbdb;
+$quaternary-color-slate: #2a2a2a;
+$quinary-color-red: #dc5050;
 
 //padding/margins vars
 $basespace: .5em;

@@ -1,0 +1,290 @@
+
+.vertical-align:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+
+
+
+}
+.center {
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.vertical-center-absolute {
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+}
+
+.overflow {
+  overflow: hidden;
+}
+.relative {
+  position: relative;
+}
+.full-width {
+  width: 100%;
+}
+.full-height {
+  height: 100%;
+}
+.z-layer-important {
+  z-index: 999999999;
+}
+.z-layer-top {
+  z-index: 3;
+}
+.z-layer-middle {
+  z-index: 2;
+}
+.z-layer-bottom {
+  z-index: 1;
+}
+
+
+
+.hide-on-smallBP3 {
+  @media #{$mq-smallBP3} {
+    display: none
+  }
+}
+
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: auto;
+  @media #{$mq-xlargeBP2} {
+    width: 95%;
+  }
+}
+
+.container.large {
+  max-width: 1200px;
+  @media all and (max-width: 1200px) {
+    padding-left:.75em;
+    padding-right: .75em;
+  }
+}
+
+
+//Basic layout
+
+//Rows
+.row {
+  margin-left: auto;
+  margin-right: auto;
+
+
+  // Clear floating children
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  //start with one
+  $i: 1;
+  //for each columns loop
+  @while $i <= $columns {
+    //calculate the percentage
+    $perc: unquote((100 / ($i)) + "%");
+    //create class
+    &.s#{$i}-all > * {
+      width: $perc;
+
+      float: left;
+      &.pull-right {
+        float: right;
+      }
+    }
+    $i: $i + 1;
+  }
+
+  @media #{$mq-smallBP3-min} {
+
+    $i: 1;
+    @while $i <= $columns {
+      $perc: unquote((100 / ($i)) + "%");
+      &.m#{$i}-all > * {
+        width: $perc;
+
+      }
+      $i: $i + 1;
+    }
+
+
+  }
+  @media #{$mq-xlargeBP-min} {
+
+    $i: 1;
+    @while $i <= $columns {
+      $perc: unquote((100 / ($i)) + "%");
+      &.l#{$i}-all > * {
+        width: $perc;
+
+      }
+      $i: $i + 1;
+    }
+    $i: 1;
+
+  }
+  .col {
+    float: left;
+
+    //float item to the right
+    &.pull-right {
+      float: right;
+    }
+    &.offset-s-none {
+      margin-left:0;
+    }
+    //start with one for loops
+    $i: 1;
+    //for each columns loop
+    @while $i <= $columns {
+      //calculate the percentage
+      $perc: unquote((100 / ($columns / $i)) + "%");
+      //create class
+      //Example: s12
+      &.s#{$i} {
+        width: $perc;
+      }
+      &.offset-s#{$i} {
+        margin-left: $perc;
+      }
+      $i: $i + 1;
+    }
+
+
+    @media #{$mq-smallBP3-min} {
+
+      $i: 1;
+      &.offset-m-none {
+        margin-left:0;
+      }
+      @while $i <= $columns {
+        $perc: unquote((100 / ($columns / $i)) + "%");
+        &.m#{$i} {
+          width: $perc;
+
+        }
+
+        &.offset-m#{$i} {
+          margin-left: $perc;
+        }
+        $i: $i + 1;
+      }
+
+
+    }
+
+    @media #{$mq-xlargeBP-min} {
+      &.offset-l-none {
+        margin-left:0;
+      }
+      $i: 1;
+      @while $i <= $columns {
+        $perc: unquote((100 / ($columns / $i)) + "%");
+        &.l#{$i} {
+          width: $perc;
+
+        }
+        &.offset-l#{$i} {
+          margin-left: $perc;
+        }
+        $i: $i + 1;
+      }
+
+    }
+
+  }
+}
+
+
+//Layout with flexbox support
+.flexbox .row.flex {
+  display: flex;
+  flex-direction: row	;
+  flex-wrap: wrap;
+
+  //reverse order
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+  //vertical center item
+  .col {
+    &.center-vertical {
+      align-self:center;
+    }
+
+    //start with one for loops
+    $i: 1;
+    //generates columns for s columns
+    @while $i <= $columns {
+      //calculate the percentage
+      $perc: unquote((100 / ($columns / $i)) + "%");
+      //create class
+      //Example: s12
+      &.s#{$i} {
+        flex-basis: $perc;
+
+      }
+      &.offset-s#{$i} {
+        margin-left: $perc;
+      }
+      $i: $i + 1;
+    }
+    //end of small grid
+
+    //start medium grid
+    @media #{$mq-smallBP3-min} {
+
+      $i: 1;
+      @while $i <= $columns {
+        $perc: unquote((100 / ($columns / $i)) + "%");
+        &.m#{$i} {
+          flex-basis: $perc;
+
+        }
+
+        &.offset-m#{$i} {
+          margin-left: $perc;
+        }
+        $i: $i + 1;
+      }
+
+
+    }//end medium grid
+
+    //start large grid
+    @media #{$mq-xlargeBP-min} {
+
+      $i: 1;
+      @while $i <= $columns {
+        $perc: unquote((100 / ($columns / $i)) + "%");
+        &.l#{$i} {
+          flex-basis: $perc;
+        }
+        &.offset-l#{$i} {
+          margin-left: $perc;
+        }
+        $i: $i + 1;
+      }
+
+    } //end large grid
+  }
+
+
+
+
+
+
+}

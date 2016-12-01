@@ -9,7 +9,6 @@ const HeaderNav = () => (
         <figure>
             <figcaption className="header--wrapper">
                 <div className="header--fill">
-                    <iframe width="100%" height="300px" allowfullscreen="" frameborder="0" src="//storage.googleapis.com/vrview/2.0/index.html?image=//storage.googleapis.com/vrview/examples/coral.jpg&is_stereo=true&is_vr_off"></iframe>
                     <h1 className="header--title">&lt; Hi, my name Edgar Pino /&gt;</h1>
                 </div>
             </figcaption>
