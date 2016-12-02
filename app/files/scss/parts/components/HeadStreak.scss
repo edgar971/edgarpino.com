@@ -1,7 +1,6 @@
 .main--header {
 
 
-
 }
 
 .header--wrapper {
@@ -14,5 +13,11 @@
   .header--title {
     font-size: 3vmax;
     font-family: $headingFont;
+  }
+
+  .profile--image {
+    display: block;
+    margin: auto;
+    width: 150px;
   }
 }
