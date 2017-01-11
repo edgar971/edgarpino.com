@@ -41,6 +41,11 @@ module.exports = {
                 loaders: ['babel'],
                 exclude: /(node_modules)/,
 
+            },
+
+            {
+                test: /(\.png|\.jpg|\.svg)/,
+                loader: 'url-loader?limit=20000'
             }
 
         ]

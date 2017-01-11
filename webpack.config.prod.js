@@ -1,6 +1,8 @@
 var path = require('path'),
     webpack = require('webpack'),
-    HtmlWebpackPlugin = require('html-webpack-plugin');
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 
 
 
@@ -22,7 +24,8 @@ module.exports = {
         new webpack.optimize.OccurrenceOrderPlugin(),
         new HtmlWebpackPlugin({
             template: './app/index.html'
-        })
+        }),
+        new ExtractTextPlugin("files/css/[name].css")
 
     ],
 
@@ -30,7 +33,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.scss$/,
-                loaders: ["style", "css", "sass"]
+                loader: ExtractTextPlugin.extract("style", "css!sass")
             },
 
             {
@@ -38,6 +41,11 @@ module.exports = {
                 loaders: ['babel'],
                 exclude: /(node_modules)/,
 
+            },
+
+            {
+                test: /(\.png|\.jpg)/,
+                loader: 'url-loader?limit=20000'
             }
 
         ]
