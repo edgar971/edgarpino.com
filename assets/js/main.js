@@ -1,9 +1,3 @@
-/*
-	Highlights by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
 
 	skel.breakpoints({
@@ -52,7 +46,7 @@
 					$window.on('load.hl_scrolly', function() {
 
 						$('.scrolly').scrolly({
-							speed: 1500,
+							speed: 1000,
 							parent: $wrapper,
 							pollOnce: true
 						});
@@ -69,7 +63,7 @@
 
 				// Scrolly.
 					$('.scrolly').scrolly({
-						speed: 1500
+						speed: 1000
 					});
 
 			}
