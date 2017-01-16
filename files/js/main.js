@@ -1,4 +1,4 @@
-(function($) {
+module.exports = (function($) {
 
 	skel.breakpoints({
 		large: '(max-width: 1680px)',

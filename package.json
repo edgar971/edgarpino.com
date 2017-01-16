@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Personal website. ",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "edgar",
     "pino",
@@ -14,9 +13,12 @@
   "author": "Edgar Pino <me@edgarpino.com>",
   "license": "ISC",
   "devDependencies": {
-
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "webpack": "^1.13.3"
   },
   "dependencies": {
-
+    "jquery": "^3.1.1"
   }
 }
