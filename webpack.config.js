@@ -6,11 +6,9 @@ module.exports = {
         path.resolve('files/js/main.js')
     ],
     output: {
-        path: path.resolve('files/'),
-        filename: 'js/all.js'
+        filename: 'files/js/bundle.js',
     },
     debug:false,
-    devtool: 'source-map',
     module: {
         loaders: [
             {
@@ -18,7 +16,6 @@ module.exports = {
                 exclude: /(node_modules)/,
                 loader: 'babel-loader',
                 query: {
-                    plugins: ['transform-runtime'],
                     presets: ['es2015']
                 }
             },

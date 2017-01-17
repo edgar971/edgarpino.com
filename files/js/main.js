@@ -1,4 +1,11 @@
-module.exports = (function($) {
+let $ = require('jquery'),
+    scrollex = require('./jquery.scrollex'),
+    scrolly = require('./jquery.scrolly'),
+	util = require('./util'),
+	skel = require('skel-framework');
+
+
+(function() {
 
 	skel.breakpoints({
 		large: '(max-width: 1680px)',
@@ -210,4 +217,4 @@ module.exports = (function($) {
 
 	});
 
-})(jQuery);
+})();
