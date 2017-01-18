@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Personal website. ",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "wp": "webpack"
+  },
   "keywords": [
     "edgar",
     "pino",

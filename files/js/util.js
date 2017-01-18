@@ -1,7 +1,8 @@
 let jQuery = require('jquery');
 
 
-module.exports = (function($) {
+(function($) {
+
 
 	/**
 	 * Generate an indented list of links from a nav. Meant for use with panel().
@@ -527,7 +528,6 @@ module.exports = (function($) {
 	 * @param {bool} condition If true, moves elements to the top. Otherwise, moves elements back to their original locations.
 	 */
 	$.prioritize = function($elements, condition) {
-
 		var key = '__prioritize';
 
 		// Expand $elements if it's not already a jQuery object.

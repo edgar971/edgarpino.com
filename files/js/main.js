@@ -5,7 +5,6 @@ let $ = require('jquery'),
 	skel = require('skel-framework');
 
 
-(function() {
 
 	skel.breakpoints({
 		large: '(max-width: 1680px)',
@@ -14,25 +13,26 @@ let $ = require('jquery'),
 		xsmall: '(max-width: 480px)'
 	});
 
+let	$window = $(window),
+    $body = $('body'),
+    $html = $('html');
+
+// Disable animations/transitions until the page has loaded.
+$html.addClass('is-loading');
+
+$window.on('load', function() {
+
+    $html.removeClass('is-loading');
+
+});
+
 	$(function() {
 
-		var	$window = $(window),
-			$body = $('body'),
-			$html = $('html');
-
-		// Disable animations/transitions until the page has loaded.
-			$html.addClass('is-loading');
-
-			$window.on('load', function() {
-				window.setTimeout(function() {
-					$html.removeClass('is-loading');
-				}, 0);
-			});
 
 		// Touch mode.
 			if (skel.vars.mobile) {
 
-				var $wrapper;
+				let $wrapper;
 
 				// Create wrapper.
 					$body.wrapInner('<div id="wrapper" />');
@@ -136,11 +136,14 @@ let $ = require('jquery'),
 						},
 						scroll: function(progress) {
 
+								let x;
 							// Fade out title as user scrolls down.
-								if (progress > 0.5)
-									x = 1 - progress;
-								else
-									x = progress;
+								if (progress > 0.5) {
+                                    x = 1 - progress;
+								} else {
+                                    x = progress;
+								}
+
 
 								$headerTitle.css('opacity', Math.max(0, Math.min(1, x * 2)));
 
@@ -217,4 +220,3 @@ let $ = require('jquery'),
 
 	});
 
-})();
