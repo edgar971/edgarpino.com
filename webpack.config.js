@@ -1,12 +1,15 @@
-var webpack = require('webpack'),
-    path = require('path');
+let webpack = require('webpack'),
+    path = require('path'),
+    BUILD_DIR = path.resolve(__dirname, 'build'),
+    APP_DIR = path.resolve(__dirname, 'files');
+
+
 
 module.exports = {
-    entry: [
-        path.resolve('files/js/main.js')
-    ],
+    entry: APP_DIR + '/js/main.js',
     output: {
-        filename: 'files/js/bundle.js',
+        path: BUILD_DIR + '/js/',
+        filename: 'bundle.js'
     },
     debug:false,
     module: {
@@ -14,7 +17,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
-                loader: 'babel-loader',
+                loader: 'babel',
                 query: {
                     presets: ['es2015']
                 }
