@@ -13,14 +13,15 @@ class ContactForm extends React.Component {
         super(props);
         this.state = {
             valid: false,
+            submitted: false
         };
     }
 
-    send() {
+    send(data) {
 
+        console.log(data);
 
     }
-
 
     validate() {
 
@@ -38,19 +39,18 @@ class ContactForm extends React.Component {
 
         }
 
-        this.state.valid = valid;
-
-
+        this.setState({
+            valid: valid
+        })
     }
 
     submit(e) {
 
         e.preventDefault();
-        let email = this.getFormValues();
+        let fields = this.getFormValues();
+        this.send(fields);
 
     }
-
-
 
 
     getFormValues() {
@@ -79,7 +79,7 @@ class ContactForm extends React.Component {
                                         <input type="submit"  value="Send Message" className="special" />
                                     </Display>
                                     <Display if={!this.state.valid}>
-                                        <input type="submit" disabled value={this.state.valid} className="special" />
+                                        <input type="submit" disabled value="Send Message" className="special" />
                                     </Display>
                                 </li>
                             </ul>
