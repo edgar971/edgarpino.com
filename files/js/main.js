@@ -1,15 +1,15 @@
-let $ = require('jquery'),
-    scrollex = require('./jquery.scrollex'),
-    scrolly = require('./jquery.scrolly'),
-	util = require('./util'),
-	skel = require('skel-framework'),
-    $window = $(window),
-    $body = $('body'),
-    $html = $('html'),
-	Form = require('./components/Form'),
-	React = require('react'),
-    ReactDOM = require('react-dom');
+import $ from 'jquery'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import scrollex from './jquery.scrollex'
+import scrolly from './jquery.scrolly'
+import util from './util'
+import skel from 'skel-framework'
+import Form from './components/Form'
 
+const $window = $(window)
+const $body = $('body')
+const $html = $('html')
 
 skel.breakpoints({
     large: '(max-width: 1680px)',

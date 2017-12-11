@@ -1,83 +1,54 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Display from './Display';
 import $ from 'jquery';
 
-
-/**
- *
- */
-class ContactForm extends React.Component {
-
-
+class ContactForm extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             valid: false,
             submitted: false,
             success: false,
             sending: false
-        };
-
-        this.EMAIL_SERVICE_URL = 'https://nyhxayv3k5.execute-api.us-east-1.amazonaws.com/dev/api/email/send';
-
-
+        }
+        this.EMAIL_SERVICE_URL = 'https://nyhxayv3k5.execute-api.us-east-1.amazonaws.com/dev/api/email/send'
     }
 
     send(data) {
-
-        let request = this.structureMailgunPost(data);
-
+        const request = this.structureMailgunPost(data)
         $.ajax(request).then((response) => {
-
             this.setState({
                 success: true,
                 sending: false
-            });
-
-        });
-
-
+            })
+        })
     }
 
     structureMailgunPost(fields) {
-
-        let request,
-            email = {
-                from: fields.from,
-                message: fields.message,
-                name: fields.name
-            };
-
-        request = {
+        const email = {
+            from: fields.from,
+            message: fields.message,
+            name: fields.name
+        }
+        const request = {
             type: 'POST',
             dataType: 'json',
             url: this.EMAIL_SERVICE_URL,
             data: JSON.stringify(email),
 
-        };
-
-        return request;
-
+        }
+        return request
     }
 
-    /**
-     * Simple validation.
-     */
     validate() {
+        const values = this.getFormValues()
+        let valid = true
 
-        let values = this.getFormValues(),
-            valid = true;
-
-        for(let key in values) {
-
-
-            if(values[key].length <= 0) {
-
-                valid = false;
-
+        for (let key in values) {
+            if (values[key].length <= 0) {
+                valid = false
             }
-
         }
 
         this.setState({
@@ -86,27 +57,21 @@ class ContactForm extends React.Component {
     }
 
     submit(e) {
-
-        e.preventDefault();
-
+        e.preventDefault()
         this.setState({
             sending: true
-        });
-
-        let fields = this.getFormValues();
-        this.send(fields);
-
+        })
+        let fields = this.getFormValues()
+        this.send(fields)
     }
 
 
     getFormValues() {
-
         return {
             name: ReactDOM.findDOMNode(this.refs.name).value,
             from: ReactDOM.findDOMNode(this.refs.email).value,
             message: ReactDOM.findDOMNode(this.refs.message).value
         }
-
     }
 
     render() {
@@ -115,15 +80,15 @@ class ContactForm extends React.Component {
                 <Display if={!this.state.success}>
                     <form method="post" action="javascript:void(0)" onSubmit={this.submit.bind(this)} onKeyUp={this.validate.bind(this)}>
                         <div className="row uniform">
-                            <div className="6u 12u$(xsmall)"><input type="text" ref="name" id="name" placeholder="Name" required/></div>
-                            <div className="6u$ 12u$(xsmall)"><input type="email" ref="email" id="email" placeholder="Email" required/></div>
+                            <div className="6u 12u$(xsmall)"><input type="text" ref="name" id="name" placeholder="Name" required /></div>
+                            <div className="6u$ 12u$(xsmall)"><input type="email" ref="email" id="email" placeholder="Email" required /></div>
                             <div className="12u$"><textarea ref="message" id="message" placeholder="Message" rows="4"></textarea></div>
                             <div className="12u$">
                                 <ul className="actions">
                                     <li>
 
                                         <Display if={this.state.valid && !this.state.sending}>
-                                            <input type="submit"  value="Send Message" className="special" />
+                                            <input type="submit" value="Send Message" className="special" />
                                         </Display>
                                         <Display if={!this.state.valid && !this.state.sending}>
                                             <input type="submit" disabled value="Send Message" className="special" />
@@ -146,7 +111,6 @@ class ContactForm extends React.Component {
             </div>
         )
     }
-
 }
 
-module.exports = ContactForm;
+export default ContactForm
