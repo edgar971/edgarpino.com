@@ -20,13 +20,13 @@ skel.breakpoints({
 
 $html.addClass('is-loading');
 
-$window.on('load', function() {
+$window.on('load', function () {
     $html.removeClass('is-loading');
 });
 
 ReactDOM.render(<Form />, document.getElementById('contact-form'));
 
-$(function() {
+$(function () {
     if (skel.vars.mobile) {
         let $wrapper;
 
@@ -40,11 +40,11 @@ $(function() {
                 .css('padding-bottom', 25);
 
         // Pass scroll event to window.
-        $wrapper.on('scroll', function() {
+        $wrapper.on('scroll', function () {
             $window.trigger('scroll');
         });
 
-        $window.on('load.hl_scrolly', function() {
+        $window.on('load.hl_scrolly', function () {
             $('.scrolly').scrolly({
                 speed: 1000,
                 parent: $wrapper,
@@ -65,7 +65,7 @@ $(function() {
 
     $('form').placeholder();
 
-    skel.on('+medium -medium', function() {
+    skel.on('+medium -medium', function () {
         $.prioritize(
             '.important\\28 medium\\29',
             skel.breakpoint('medium').active
@@ -77,8 +77,8 @@ $(function() {
         $headerContainer = $header.find('.container');
 
     if (!skel.vars.mobile) {
-        $window.on('load.hl_headerTitle', function() {
-            skel.on('-medium !medium', function() {
+        $window.on('load.hl_headerTitle', function () {
+            skel.on('-medium !medium', function () {
                 $headerTitle
                     .css('position', 'fixed')
                     .css('height', 'auto')
@@ -88,7 +88,7 @@ $(function() {
                     .css('margin-top', ($headerTitle.outerHeight() / -2));
             });
 
-            skel.on('+medium', function() {
+            skel.on('+medium', function () {
                 $headerTitle
                     .css('position', '')
                     .css('height', '')
@@ -102,12 +102,12 @@ $(function() {
     }
 
     // Scrollex.
-    skel.on('-small !small', function() {
+    skel.on('-small !small', function () {
         $header.scrollex({
-            terminate: function() {
+            terminate: function () {
                 $headerTitle.css('opacity', '');
             },
-            scroll: function(progress) {
+            scroll: function (progress) {
                 let x;
                 // Fade out title as user scrolls down.
                 if (progress > 0.5) {
@@ -120,12 +120,12 @@ $(function() {
         });
     });
 
-    skel.on('+small', function() {
+    skel.on('+small', function () {
         $header.unscrollex();
     });
 
     // Main sections.
-    $('.main').each(function() {
+    $('.main').each(function () {
         var $this = $(this),
             $primaryImg = $this.find('.image.primary > img'),
             $bg,
@@ -157,17 +157,17 @@ $(function() {
         };
 
         if (skel.canUse('transition')) {
-            options.init = function() { $bg.removeClass('active'); };
-            options.enter = function() { $bg.addClass('active'); };
-            options.leave = function() { $bg.removeClass('active'); };
+            options.init = function () { $bg.removeClass('active'); };
+            options.enter = function () { $bg.addClass('active'); };
+            options.leave = function () { $bg.removeClass('active'); };
         }
         else {
             $bg
                 .css('opacity', 1)
                 .hide();
-            options.init = function() { $bg.fadeOut(0); };
-            options.enter = function() { $bg.fadeIn(400); };
-            options.leave = function() { $bg.fadeOut(400); };
+            options.init = function () { $bg.fadeOut(0); };
+            options.enter = function () { $bg.fadeIn(400); };
+            options.leave = function () { $bg.fadeOut(400); };
         }
 
         $this.scrollex(options);
