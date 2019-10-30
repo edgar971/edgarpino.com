@@ -105,7 +105,7 @@ class ContactForm extends Component {
                 <Display if={this.state.success}>
                     <header>
                         <h2>Thank you!</h2>
-                        <p><strong>Your message was successfully sent. Expect an email from me soon.</strong></p>
+                        <p><strong>Your message was successfully sent. Expect a reply soon.</strong></p>
                     </header>
                 </Display>
             </div>
