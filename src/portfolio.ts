@@ -1,7 +1,7 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
   homepage: 'https://edgarpino.com',
-  title: 'Edgar',
+  title: 'EP',
 }
 
 const about = {
@@ -21,28 +21,28 @@ const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
-    name: 'Project 1',
+    name: 'ML Labs',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+      'A collection of ML projects and examples for learning.',
+    stack: ['jupyter', 'tensorflow', 'fasttext'],
+    sourceCode: 'https://github.com/edgar971/ml-labs',
+    livePreview: 'https://github.com/edgar971/ml-labs',
   },
   {
-    name: 'Project 2',
+    name: 'Tensorflow.js Demo',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+      'A quick intro and feature overview of Tensorflow.js',
+    stack: ['tensorflow.js', 'typescript'],
+    sourceCode: 'https://github.com/edgar971/tfjs-quick-intro-pres',
+    livePreview: 'https://github.com/edgar971/tfjs-quick-intro-pres',
   },
   {
-    name: 'Project 3',
+    name: 'MNIST Axon',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+      'MNIST example in Elixir using Nx and Axon.',
+    stack: ['elixir', 'axon', 'nx'],
+    sourceCode: 'https://github.com/edgar971/mnist-axon-ml',
+    livePreview: 'https://github.com/edgar971/mnist-axon-ml',
   },
 ]
 
