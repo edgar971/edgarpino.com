@@ -4,6 +4,7 @@ import { v4 } from 'uuid'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LaunchIcon from '@material-ui/icons/Launch'
 import './ProjectContainer.css'
+import React from 'react'
 
 const ProjectContainer = ({ project }: any) => (
   <div className='project'>

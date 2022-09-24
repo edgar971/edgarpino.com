@@ -7,7 +7,7 @@ const header = {
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Edgar Pino',
-  role: 'Sr. Machine Learning Engineer',
+  role: 'Machine Learning Engineer',
   description:
     'I’m a passionate Machine Learning Engineer @ Pluralsight. I have experience building scalable recommender systems, data intensive applications, and distributed systems. I have a B.S. in Computer Science and a M.S in Data Science with a capstone in Machine Learning.',
   resume: '/resume.pdf',

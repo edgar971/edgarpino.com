@@ -8,6 +8,7 @@ import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import './App.css'
+import React from 'react'
 
 const App = () => {
   const [{ themeName }] = useContext(ThemeContext) as any

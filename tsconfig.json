@@ -1,4 +1,13 @@
 {
+  "ts-node": {
+    "compilerOptions": {
+      "target": "ES2018",
+      "module": "commonjs",
+      "lib": [
+        "es2018"
+      ]
+    }
+  },
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -18,9 +27,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react"
   },
   "include": [
-    "src"
+    "src",
+    "cdk"
+  ],
+  "exclude": [
+    "node_modules",
+    "cdk.out"
   ]
 }

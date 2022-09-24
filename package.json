@@ -2,6 +2,9 @@
   "name": "edgarpino.com",
   "version": "0.1.0",
   "private": true,
+  "bin": {
+    "cdk-app": "cdk/bin/cdk-app.js"
+  },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
@@ -18,15 +21,21 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "typescript": "^4.8.3",
+    "typescript": "~3.9.7",
     "uuid": "^9.0.0",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.0",
+    "aws-cdk": "2.43.1",
+    "ts-node": "^9.0.0",
+    "aws-cdk-lib": "2.43.1",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.16"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cdk": "cdk"
   },
   "eslintConfig": {
     "extends": [
