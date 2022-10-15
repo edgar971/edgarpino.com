@@ -9,7 +9,7 @@ const about = {
   name: 'Edgar Pino',
   role: 'Machine Learning Engineer',
   description:
-    'I’m a passionate Machine Learning Engineer @ Pluralsight. I have experience building scalable recommender systems, data intensive applications, and distributed systems. I have a B.S. in Computer Science and a M.S in Data Science with a capstone in Machine Learning.',
+    'I’m a passionate Machine Learning Engineer @ Pluralsight. I have experience building scalable recommender systems, data intensive applications, and distributed systems. I have a BS in Computer Science and a MS in Data Science with a capstone in Machine Learning.',
   resume: '/resume.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/edgar-pino/',
